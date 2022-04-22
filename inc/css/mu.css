@@ -1,0 +1,277 @@
+.paragraph-new-design {
+    line-height: 1.5 !important;
+    color: #16193b !important;
+    opacity: .6;
+}
+/* =======================
+    About molo page css
+========================*/
+.text-w-image > .elementor-container > .elementor-row > .elementor-column {
+    padding-left: 55px;
+}
+.text-w-image-column > .elementor-column-wrap > .elementor-widget-wrap section.text-w-image:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+.text-w-image-column > .elementor-column-wrap > .elementor-widget-wrap section.text-w-image:not(:first-child) {
+    padding-top: 30px;
+}
+
+/* =======================
+    Latest update page css
+========================*/
+.latest-update-content {
+    width: 100%;
+    max-width: 935px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.latest-update-content ul {
+    margin-left: 40px;
+}
+.latest-update-content ul li {
+    font-family: "effra", Sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+/* =======================
+    Latest update page css
+========================*/
+.register-left,
+.register-right {
+    padding-left: 20px;
+    padding-right: 60px;
+}
+.register-left .elementor-column-wrap {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+.register-right .elementor-column-wrap {
+    width: 100%;
+    max-width: 410px;
+    margin: 0 auto;
+}
+
+/* ========================
+    register page form css
+=========================*/
+.ie-form-item {
+    margin-bottom: 1.5rem;
+}
+.ie-form-item label {
+    font-size: 18px;
+    color: #16193b;
+    font-weight: 600;
+    line-height: 1.5;
+}
+.form-main-wrapper .ie-form-item input {
+    height: 46px;
+    box-shadow: none;
+    border: 1px solid rgba(22,25,59,.6);
+    display: block;
+    width: 100%;
+    padding: 0 1rem;
+    background-color: #fff;
+    border-radius: 4px;
+    font-family: "effra", Sans-serif;
+}
+.form-main-wrapper .ie-form-item input:focus {
+    border: 2px solid #16193b;
+}
+.send-me-update-wrapp {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+}
+.send-me-update-title {
+    font-size: 18px !important;
+    color: #16193b;
+    font-weight: 600 !important;
+    margin-bottom: .75rem !important;
+}
+.checkbox-input-wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.checkbox-input-wrapper input {
+    width: auto;
+    height: auto;
+    margin-top: 3px;
+    flex: 5%;
+}
+.checkbox-input-wrapper span {
+    margin-left: 10px;
+    color: #16193b;
+    font-size: 14px;
+    flex: 95%;
+    line-height: 1.5;
+}
+.c-button-container {
+    display: flex;
+}
+.ie-form-submit-disabled:disabled {
+    background-color: #e6e6e6!important;
+    border-color: #e6e6e6!important;
+    color: #8a8c9d!important;
+    cursor: auto;
+}
+.ie-form-submit {
+    height: 50px;
+    border: 1px solid #0070c0;
+    display: inline-flex;
+    position: relative;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #0070c0;
+    border-radius: 4px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color .3s ease,border .3s ease;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    min-width: 240px;
+}
+.ie-form-submit:hover {
+    background-color: #0061a7;
+    border: 1px solid #0061a7;
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+.ie-form-terms {
+    line-height: 1.5;
+    font-size: 14px;
+    color: #333;
+}
+.ie-title-border h3 {
+    display: inline-block;
+    border-bottom: 5px solid #edf5fa;
+}
+
+/* ========================
+    responsive css start
+=========================*/
+@media only screen and (max-width: 1160px) {
+    .register-left, .register-right {
+        padding-right: 40px;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1160px) {
+    .molo-news-filter ul {
+        flex-basis: 60%;
+        width: 60%;
+        max-width: 60%;
+    }
+    form#search-wrap {
+        flex-basis: 40%;
+        width: 40%;
+        max-width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .text-w-image-column > .elementor-column-wrap > .elementor-widget-wrap section.text-w-image:nth-child(even) .elementor-row {
+        flex-direction: row-reverse;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .text-w-image,
+    .sm-device-custom-width {
+        width: 90% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .text-w-image > .elementor-container > .elementor-row > .elementor-column {
+        width: 100%;
+        padding-left: 0px;
+    }
+    #molo-news-post-wrap {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        width: 100%;
+        max-width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    #molo-news-post-wrap .molo-news-post-search {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+    }
+    .molo-news-item {
+        width: 100% !important;
+    }
+    .molo-news-filter .container {
+        flex-wrap: wrap;
+        max-width: 90% !important;
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+    .molo-news-filter ul {
+        flex-basis: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+    form#search-wrap {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .latest-update-content {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .latest-update-content > .elementor-column-wrap {
+        background: #fff !important;
+    }
+    .register-left,
+    .register-right {
+        padding-right: 20px;
+    }
+    .register-left .elementor-column-wrap {
+        max-width: 410px;
+    }
+    .ie-form-terms.tac-mobile {
+        width: 100%;
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    .team-member .elementor-image img {
+        max-width: 139px;
+    }
+    .molo-news-filter ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .molo-news-filter ul li {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .archive-banner {
+        background-image: none !important;
+        position: relative;
+    }
+    .archive-banner::after {
+        content: "";
+        width: 103px;
+        height: 126px;
+        position: absolute;
+        top: 0;
+        right: 50px;
+        background-image: url(/wp-content/uploads/2020/10/clouds.cd78f570.png);
+        background-size: cover;
+    }
+}
+
