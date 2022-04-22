@@ -26,7 +26,7 @@
         loop: true,
         dots: true,
         nav : true,
-        navText:["<img src=/wp-content/themes/ChildTheme/inc/images/left-arrow.svg')>","<img src='wp-content/themes/ChildTheme/inc/images/right-arrow.svg'>"],
+        navText:["<img src='/wp-content/themes/ChildTheme/inc/images/left-arrow.svg'>","<img src='/wp-content/themes/ChildTheme/inc/images/right-arrow.svg'>"],
         dotsContainer: '.timeline-slider-dot-container-mobile .timeline-slider-dot-wrapper-mobile',
         pagination: true,
         smartSpeed: 800,

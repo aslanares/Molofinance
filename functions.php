@@ -177,73 +177,17 @@ function get_parameter_from_url() {
 
 }
 
-/**
- * Retrieve url params and set locally
- */
-if (!function_exists('set_parameter_to_site')) {
-    function set_parameter_to_site() {
-        $url_array_data = get_parameter_from_url();
-        if (!empty($url_array_data)) {
-            ?>
-            <script>
+add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 
-                <?php
-                $url_data = json_encode($url_array_data);
-
-                if ($url_data){ ?>
-                localStorage.setItem('utm_params', '<?php echo $url_data?>');
-                <?php }
-
-                ?>
-            </script>
-            <?php
+function add_async_attribute($tag, $handle)
+{
+    if(!is_admin()){
+        if ('jquery-core' == $handle) {
+            return $tag;
         }
-
-
-        ?>
-        <script>
-            jQuery(document).ready(function () {
-
-                let molo_url_data = localStorage.getItem('utm_params');
-
-                let molo_allowed_url_params = ['utm_campaign', 'utm_source', 'utm_medium', 'utm_keyword', 'utm_content', 'gclid'];
-
-                if (molo_url_data) {
-                    let molo_data_purse = JSON.parse(molo_url_data);
-                    let molo_url = [];
-                    jQuery.each(molo_allowed_url_params, function (i, el) {
-                        if (molo_data_purse[el]) {
-                            molo_url.push(el + '=' + molo_data_purse[el])
-                        }
-
-                    })
-                    //console.log(molo_url);
-
-                    if (molo_url.length) {
-                        jQuery('body').on('click', '.molo_external_link', function (e) {
-                            e.preventDefault()
-                            var link, anchor;
-                            if (jQuery(this).is('a')) {
-                                anchor = jQuery(this);
-                                link = anchor.attr('href')
-                            } else {
-                                anchor = jQuery(this).find('a');
-                                link = anchor.attr('href');
-                            }
-                            if (link && '#' !== link) {
-                                var url = link + '/?' + molo_url.join('&');
-                                window.location.href = url;
-                            }
-                        });
-                    }
-
-                } 
-
-            });
-        </script>
-        <?php
+        return str_replace(' src', ' defer src', $tag);
+    }else{
+        return $tag;
     }
 
-    add_action('wp_head', 'set_parameter_to_site');
 }
-
